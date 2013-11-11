@@ -24,9 +24,10 @@ def producte_matriu(matriu1, matriu2):
 			# Passa per cada fila
 			for i, row in enumerate(matriu1):
 				new_column = []
-				
+				# Realitza la multiplicació per cada columna
 				for k in range(len(matriu2[-1])):
 					suma_productes = 0
+					# Fa la suma del producte de cada fila
 					for j, value in enumerate(row):
 						suma_productes += value * matriu2[j][k]
 					new_column += [suma_productes]
