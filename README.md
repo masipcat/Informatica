@@ -1,0 +1,3 @@
+Informatica
+===========
+Exercicis d'informàtica
