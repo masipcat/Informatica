@@ -15,4 +15,3 @@ print "multiplicacio"
 multiplicar = multiplicarMatriu(m1, m2)
 print
 print escriureMatriu(multiplicar)
-
