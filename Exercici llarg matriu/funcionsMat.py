@@ -78,12 +78,14 @@ def sumaDiagonals(det, diagonal_invertida):
 
 	valors = range(len(det))
 	valors2 = valors
-	invertir = 1	
+	invertir = 1
 
 	# Si es volen calcular les diagonals invertides
 	if diagonal_invertida:
 		invertir = -1
 		valors2.reverse() # Fer que 'start' vagi del valor gran al petit
+
+	print "Start"
 
 	resultat = 0
 	for start in valors2:
@@ -91,12 +93,14 @@ def sumaDiagonals(det, diagonal_invertida):
 		for i in valors:
 			# Multiplica cada element de la diagonal
 			diagonal *= determinant[(i+start)*invertir][i]
+			print diagonal
 		resultat += diagonal # Suma la llista de diagonals
+		print "---"
 	return resultat
 
 def determinantMatriu(determinant):
 	"""
-	Retorna un enter amb la diferència de cada diagonal
+	Retorna un enter amb la diferència de cada diagonal. Només funciona amb determinants de rang 2 i 3
 	Jordi Masip
 	"""
 	if esQuadrada(determinant):
