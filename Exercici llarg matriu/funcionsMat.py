@@ -5,6 +5,10 @@ def esQuadrada(matriu):
 	"""
 	Retorna True o False, segons si és una matriu quadrada o no (comprova si té el mateix número de files i columnes)
 	Jordi Masip
+	>>> esQuadrada([[1,2],[1,3]])
+	True
+	>>> esQuadrada([[1,2]])
+	False
 	"""
 	longitud = len(matriu)
 	for row in matriu:
@@ -12,6 +16,9 @@ def esQuadrada(matriu):
 			return False
 	else:
 		return True
+
+def esBuida(m):
+	return len(m) == 0
 
 def matriuBuida(f, c):
 	"""
@@ -57,57 +64,26 @@ def escriureMatriu(m):
 
 def sumarMatriu(a, b):
 	"""
-	suma cada element de la matriu
+	Suma cada element de la matriu
 	Felipe Arango
 	"""
-	c=matriuBuida(3, 3)
+	matriu = matriuBuida(3, 3)
 	for i in range(3):
 		for j in range(3):
-			c[i][j]=a[i][j]+b[i][j]
-	return c
+			matriu[i][j] = a[i][j] + b[i][j]
+	return matriu
 
-def sumaDiagonals(det, diagonal_invertida):
-	"""
-	Retorna la suma del producte de cada element de la diagonal.
-	Jordi Masip
-	"""
-	# Es duplica el determinant original
-	determinant = []
-	determinant.extend(det)
-	determinant.extend(det)
-
-	valors = range(len(det))
-	valors2 = valors
-	invertir = 1
-
-	# Si es volen calcular les diagonals invertides
-	if diagonal_invertida:
-		invertir = -1
-		valors2.reverse() # Fer que 'start' vagi del valor gran al petit
-
-	print "Start"
-
-	resultat = 0
-	for start in valors2:
-		diagonal = 1
-		for i in valors:
-			# Multiplica cada element de la diagonal
-			diagonal *= determinant[(i+start)*invertir][i]
-			print diagonal
-		resultat += diagonal # Suma la llista de diagonals
-		print "---"
-	return resultat
-
-def determinantMatriu(determinant):
+def determinantMatriu(m1):
 	"""
 	Retorna un enter amb la diferència de cada diagonal. Només funciona amb determinants de rang 2 i 3
-	Jordi Masip
+	Felipe Arango
 	"""
-	if esQuadrada(determinant):
-		return sumaDiagonals(determinant, False) - sumaDiagonals(determinant, True)
-	return False
+	diagonal1 = m1[0][1]*m1[1][2]*m1[2][0]+m1[0][2]*m1[1][0]*m1[2][1]+m1[0][0]*m1[1][1]*m1[2][2]
+	diagonal2= m1[2][0]*m1[1][1]*m1[0][2]+m1[2][1]*m1[1][2]*m1[0][0]+m1[2][2]*m1[1][0]*m1[0][1]
+	determinant = diagonal1-diagonal2
+	return determinant
 
-def producte_matriu(matriu1, matriu2):
+def producteMatriu(matriu1, matriu2):
 	"""
 	Retorna una matriu 2D resultat del producte de la primera amb la segona
 	Jordi Masip
