@@ -1,0 +1,22 @@
+sdf,5
+asdf,6
+asdf,8
+asdf,9
+asdf,2
+adf,6
+asdf,9
+asdf,6
+asdf,8
+asdf,4
+asdf,2
+asdf,2
+asdf6,6
+asdf,9
+asdf,7
+asdf3,3
+asdf,8
+asdf,6
+asdf4,1
+asdf,2
+
+Mitjana de components: 5.19047619048
