@@ -1,0 +1,1 @@
+print "assert es una keyword de Python"
