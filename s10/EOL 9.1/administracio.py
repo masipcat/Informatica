@@ -51,7 +51,10 @@ while n != 0:
 			# camps està definit a "gestióUsuaris.py"
 			values = dic[username]
 			for camp in camps:
-				new_value = raw_input(nom_camps[camp] + " (" + dic[username][camp] + "): ")
+				valor_actual = " (" + dic[username][camp] + ")"
+				if camp == "passwd":
+					valor_actual = ""
+				new_value = raw_input(nom_camps[camp] + valor_actual + ": ")
 				if new_value != "":
 					values[camp] = new_value
 			if modifyUser(dic, username, values):

@@ -1,11 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import hashlib
+
 def dictToStr(dic):
 	txt = ""
 	for k in dic:
 		valors = ""
 		for field in dic[k]:
+			if field == "passwd":
+				dic[k][field] = hashlib.sha224(dic[k][field]).hexdigest()
 			valors += "|" + field + ":" + dic[k][field]
 		txt += "\n" + k + "::" + valors[1:]
 	return txt[1:]
