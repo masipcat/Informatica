@@ -1,1 +1,0 @@
-JMasip::passwd:aea93ae2ec154498984050a299ec80aed6536f0454f9b0b54b5e15c9|nom:Jordi|cognom:Masip|adress:234|telf:234
