@@ -1,0 +1,11 @@
+Laboratori sessió 11: Tuples
+
+EOP 8.1
+
+EOP 8.2
+
+EOP 8.3
+
+EOP 8.4
+
+EOL 8.1 + EOL 8.2
