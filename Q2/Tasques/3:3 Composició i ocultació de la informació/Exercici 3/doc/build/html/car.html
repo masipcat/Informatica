@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Car module &mdash; Garage class 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Garage class 1.0 documentation" href="index.html" />
+    <link rel="next" title="Garage module" href="garage.html" />
+    <link rel="prev" title="Welcome to Garage class’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="garage.html" title="Garage module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Garage class’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Garage class 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <span class="target" id="module-car"></span><div class="section" id="car-module">
+<h1>Car module<a class="headerlink" href="#car-module" title="Permalink to this headline">¶</a></h1>
+<p>This module contains Car Class</p>
+</div>
+<dl class="class">
+<dt id="car.Car">
+<em class="property">class </em><tt class="descclassname">car.</tt><tt class="descname">Car</tt><big>(</big><em>car_license</em><big>)</big><a class="reference internal" href="_modules/car.html#Car"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#car.Car" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="car.Car.getColor">
+<tt class="descname">getColor</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/car.html#Car.getColor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#car.Car.getColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an RGB Color</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">CarLicense</span><span class="p">(</span><span class="s">&quot;1234 WWW&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">setColor</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">getColor</span><span class="p">()</span>
+<span class="go">(24, 24, 0)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="car.Car.getEngine">
+<tt class="descname">getEngine</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/car.html#Car.getEngine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#car.Car.getEngine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return 0 for <cite>ENGINE_DIESEL</cite> and 1 for <cite>ENGINE_GASOLINE</cite></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">CarLicense</span><span class="p">(</span><span class="s">&quot;1234 WWW&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">setEngine</span><span class="p">(</span><span class="n">Car</span><span class="o">.</span><span class="n">ENGINE_GASOLINE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">getEngine</span><span class="p">()</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="car.Car.getLicense">
+<tt class="descname">getLicense</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/car.html#Car.getLicense"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#car.Car.getLicense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an string from CarLicense object</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">CarLicense</span><span class="p">(</span><span class="s">&quot;1234 WWW&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">getLicense</span><span class="p">()</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span>
+<span class="go">&#39;1234 WWW&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="car.Car.getModel">
+<tt class="descname">getModel</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/car.html#Car.getModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#car.Car.getModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the model of this car</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">CarLicense</span><span class="p">(</span><span class="s">&quot;1234 WWW&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">setModel</span><span class="p">(</span><span class="s">&quot;Renault Grand Modus&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">getModel</span><span class="p">()</span>
+<span class="go">&#39;Renault Grand Modus&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="car.Car.setColor">
+<tt class="descname">setColor</tt><big>(</big><em>color</em><big>)</big><a class="reference internal" href="_modules/car.html#Car.setColor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#car.Car.setColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change car color</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>color</strong> (<em>Color</em>) &#8211; RGB Color</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">CarLicense</span><span class="p">(</span><span class="s">&quot;1234 WWW&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">setColor</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">getColor</span><span class="p">()</span>
+<span class="go">(24, 24, 0)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="car.Car.setEngine">
+<tt class="descname">setEngine</tt><big>(</big><em>engine</em><big>)</big><a class="reference internal" href="_modules/car.html#Car.setEngine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#car.Car.setEngine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set engine type. Use <cite>ENGINE_DIESEL</cite> and <cite>ENGINE_GASOLINE</cite> constants.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>engine</strong> (<em>int</em>) &#8211; Car.ENGINE_DIESEL or Car.ENGINE_GASOLINE</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">CarLicense</span><span class="p">(</span><span class="s">&quot;1234 WWW&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">setEngine</span><span class="p">(</span><span class="n">Car</span><span class="o">.</span><span class="n">ENGINE_DIESEL</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">getEngine</span><span class="p">()</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="car.Car.setLicense">
+<tt class="descname">setLicense</tt><big>(</big><em>license</em><big>)</big><a class="reference internal" href="_modules/car.html#Car.setLicense"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#car.Car.setLicense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set license using CarLicense class</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>license</strong> (<em>CarLicense</em>) &#8211; Set license</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">CarLicense</span><span class="p">(</span><span class="s">&quot;1234 WWW&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">setLicense</span><span class="p">(</span><span class="n">CarLicense</span><span class="p">(</span><span class="s">&quot;2222 BCD&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">getLicense</span><span class="p">()</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span>
+<span class="go">&#39;2222 BCD&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="car.Car.setModel">
+<tt class="descname">setModel</tt><big>(</big><em>model</em><big>)</big><a class="reference internal" href="_modules/car.html#Car.setModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#car.Car.setModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the model of this car</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>model</strong> (<em>str</em>) &#8211; Car model</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">CarLicense</span><span class="p">(</span><span class="s">&quot;1234 WWW&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">setModel</span><span class="p">(</span><span class="s">&quot;Renault Grand Modus&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">renault</span><span class="o">.</span><span class="n">getModel</span><span class="p">()</span>
+<span class="go">&#39;Renault Grand Modus&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Garage class&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="garage.html"
+                        title="next chapter">Garage module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/car.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="garage.html" title="Garage module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Garage class’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">Garage class 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Jordi Masip.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>

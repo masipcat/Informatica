@@ -1,0 +1,705 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R
+ /F2 3 0 R
+ /F3 4 0 R
+ /F4 5 0 R
+ /F5 6 0 R
+ /F6 7 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F2': class PDFType1Font 
+3 0 obj
+% Font Helvetica-Bold
+<< /BaseFont /Helvetica-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F2
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F3': class PDFType1Font 
+4 0 obj
+% Font Courier
+<< /BaseFont /Courier
+ /Encoding /WinAnsiEncoding
+ /Name /F3
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F4': class PDFType1Font 
+5 0 obj
+% Font Courier-Oblique
+<< /BaseFont /Courier-Oblique
+ /Encoding /WinAnsiEncoding
+ /Name /F4
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F5': class PDFType1Font 
+6 0 obj
+% Font Courier-Bold
+<< /BaseFont /Courier-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F5
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F6': class PDFType1Font 
+7 0 obj
+% Font Helvetica-Oblique
+<< /BaseFont /Helvetica-Oblique
+ /Encoding /WinAnsiEncoding
+ /Name /F6
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page1': class PDFPage 
+8 0 obj
+% Page dictionary
+<< /Contents 20 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 19 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page2': class PDFPage 
+9 0 obj
+% Page dictionary
+<< /Contents 21 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 19 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R10': class PDFCatalog 
+10 0 obj
+% Document Root
+<< /Outlines 12 0 R
+ /PageLabels 22 0 R
+ /PageMode /UseNone
+ /Pages 19 0 R
+ /Type /Catalog >>
+endobj
+% 'R11': class PDFInfo 
+11 0 obj
+<< /Author (Jordi Masip and Oriol Lanuza.)
+ /CreationDate (D:20140302214235-01'00')
+ /Creator (\(unspecified\))
+ /Keywords ()
+ /Producer (ReportLab PDF Library - www.reportlab.com)
+ /Subject (\(unspecified\))
+ /Title (LISTS) >>
+endobj
+% 'R12': class PDFOutlines 
+12 0 obj
+<< /Count 6
+ /First 13 0 R
+ /Last 18 0 R
+ /Type /Outlines >>
+endobj
+% 'Outline.0': class OutlineEntryObject 
+13 0 obj
+<< /Dest [ 8 0 R
+ /XYZ
+ 62.69291
+ 689.0236
+ 0 ]
+ /Next 14 0 R
+ /Parent 12 0 R
+ /Title (INTRODUCTION) >>
+endobj
+% 'Outline.1': class OutlineEntryObject 
+14 0 obj
+<< /Dest [ 8 0 R
+ /XYZ
+ 62.69291
+ 556.8236
+ 0 ]
+ /Next 15 0 R
+ /Parent 12 0 R
+ /Prev 13 0 R
+ /Title (ACCESS BY INDEX) >>
+endobj
+% 'Outline.2': class OutlineEntryObject 
+15 0 obj
+<< /Dest [ 8 0 R
+ /XYZ
+ 62.69291
+ 342.2236
+ 0 ]
+ /Next 16 0 R
+ /Parent 12 0 R
+ /Prev 14 0 R
+ /Title (LIST LENGTH) >>
+endobj
+% 'Outline.3': class OutlineEntryObject 
+16 0 obj
+<< /Dest [ 8 0 R
+ /XYZ
+ 62.69291
+ 186.8236
+ 0 ]
+ /Next 17 0 R
+ /Parent 12 0 R
+ /Prev 15 0 R
+ /Title (LIST SLICING) >>
+endobj
+% 'Outline.4': class OutlineEntryObject 
+17 0 obj
+<< /Dest [ 9 0 R
+ /XYZ
+ 62.69291
+ 633.8236
+ 0 ]
+ /Next 18 0 R
+ /Parent 12 0 R
+ /Prev 16 0 R
+ /Title (SEARCH, INSERT AND ORDER) >>
+endobj
+% 'Outline.5': class OutlineEntryObject 
+18 0 obj
+<< /Dest [ 9 0 R
+ /XYZ
+ 62.69291
+ 395.2236
+ 0 ]
+ /Parent 12 0 R
+ /Prev 17 0 R
+ /Title (REMOVING ELEMENTS) >>
+endobj
+% 'R19': class PDFPages 
+19 0 obj
+% page tree
+<< /Count 2
+ /Kids [ 8 0 R
+ 9 0 R ]
+ /Type /Pages >>
+endobj
+% 'R20': class PDFStream 
+20 0 obj
+% page stream
+<< /Length 6871 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 206.6049 0 Td (LISTS) Tj T* -206.6049 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 716.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 31.37937 0 Td (Authors:) Tj T* -31.37937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Jordi Masip and Oriol Lanuza.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 701.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 48.03937 0 Td (Date:) Tj T* -48.03937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (02/03/2014) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 668.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (INTRODUCTION) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 638.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 1.338876 Tw (Lists are a datatype you can use to store a collection of different pieces of information as a sequence) Tj T* 0 Tw (under a single variable name.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 620.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (You should be careful to avoid using the word ) Tj /F2 10 Tf (list ) Tj /F1 10 Tf (as a variable, that's a reserved word.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 602.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (You can assign items to a list with an expression of the form:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 568.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (list_name) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj ([) Tj (item_1) Tj (,) Tj ( ) Tj (item_2) Tj (]) Tj (  ) Tj /F4 10 Tf .25098 .501961 .501961 rg (#create a list of 2 items.) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 535.8236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (ACCESS BY INDEX) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 505.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .900488 Tw (You can access an individual item on the list by its index. An index is like an address that identifies the) Tj T* 0 Tw (item's place in the list. The index appears directly after the list name, in between brackets, like this:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 472.6236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F5 10 Tf 0 .501961 0 rg (print) Tj /F3 10 Tf 0 0 0 rg ( ) Tj (list_name) Tj ([) Tj (index) Tj (]) Tj (  ) Tj /F4 10 Tf .25098 .501961 .501961 rg (#prints the item assigned to the index.) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 452.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (List indices begin with 0. You access the first item in a list like this:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 419.4236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F5 10 Tf 0 .501961 0 rg (print) Tj /F3 10 Tf 0 0 0 rg ( ) Tj (list_name) Tj ([) Tj .4 .4 .4 rg (0) Tj 0 0 0 rg (]) Tj ( ) Tj /F4 10 Tf .25098 .501961 .501961 rg (#prints the first item in the list.) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 387.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .456488 Tw (A list index behaves like any other variable name. It can be used to access as well as assign values. For) Tj T* 0 Tw (example:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 354.2236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (list_name) Tj ([) Tj .4 .4 .4 rg (3) Tj 0 0 0 rg (]) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ("Hello!") Tj 0 0 0 rg (  ) Tj /F4 10 Tf .25098 .501961 .501961 rg (#this changes the item in index 3 to "Hello!") Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 321.2236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (LIST LENGTH) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 303.2236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (A list doesn't have to have a fixed length. You can add items to the end of a list any time you like.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 285.2236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (You can add new items with ) Tj /F6 10 Tf (.append\(\) ) Tj /F1 10 Tf (function:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 252.0236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (list_name) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (append) Tj (\() Tj (new_item) Tj (\)) Tj (  ) Tj /F4 10 Tf .25098 .501961 .501961 rg (#adds new_item to the list) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 232.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (You can find the number of items in the list with the funcion ) Tj /F6 10 Tf (len\(list_name\)) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 198.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F5 10 Tf 0 .501961 0 rg (print) Tj /F3 10 Tf 0 0 0 rg ( ) Tj 0 .501961 0 rg (len) Tj 0 0 0 rg (\() Tj (list_name) Tj (\)) Tj (  ) Tj /F4 10 Tf .25098 .501961 .501961 rg (#prints the list's length) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 165.8236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (LIST SLICING) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 147.8236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (If you only wants to see a portion of a list, you can use ) Tj /F6 10 Tf (list_name[index1:index2]) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 102.6236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 36 re B*
+Q
+q
+BT 1 0 0 1 0 14 Tm 12 TL /F3 10 Tf 0 0 0 rg (letters) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj ([) Tj .729412 .129412 .129412 rg ('a') Tj 0 0 0 rg (,) Tj ( ) Tj .729412 .129412 .129412 rg ('b') Tj 0 0 0 rg (,) Tj ( ) Tj .729412 .129412 .129412 rg ('c') Tj 0 0 0 rg (,) Tj ( ) Tj .729412 .129412 .129412 rg ('d') Tj 0 0 0 rg (,) Tj ( ) Tj .729412 .129412 .129412 rg ('e') Tj 0 0 0 rg (]) Tj  T* 0 .501961 0 rg (slice) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (letters) Tj ([) Tj .4 .4 .4 rg (1) Tj 0 0 0 rg (:) Tj .4 .4 .4 rg (3) Tj 0 0 0 rg (]) Tj (   ) Tj /F4 10 Tf .25098 .501961 .501961 rg (#slices become a list of the 2nd and 3rd elements) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+% 'R21': class PDFStream 
+21 0 obj
+% page stream
+<< /Length 5319 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .315207 Tw (If your list slice includes the very first or last item in a list \(or a string\), the index for that item doesn't have) Tj T* 0 Tw (to be included:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 695.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 36 re B*
+Q
+q
+BT 1 0 0 1 0 14 Tm 12 TL /F3 10 Tf 0 0 0 rg (my_list) Tj ([:) Tj .4 .4 .4 rg (2) Tj 0 0 0 rg (]) Tj (             ) Tj /F4 10 Tf .25098 .501961 .501961 rg (# Grabs the first two items) Tj /F3 10 Tf 0 0 0 rg  T* (my_list) Tj ([) Tj .4 .4 .4 rg (3) Tj 0 0 0 rg (:]) Tj (             ) Tj /F4 10 Tf .25098 .501961 .501961 rg (# Grabs the fourth through last items) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 675.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (We start at the index before the colon and continue up to but not including the index after the colon.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 645.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 1.901988 Tw (You can slice a string exactly like a list. In fact, you can think of strings as lists of characters: each) Tj T* 0 Tw (character is a sequential item in the list, starting from index 0.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 612.8236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (SEARCH, INSERT AND ORDER) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 594.8236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Sometimes you need to search for an item in a list. You can do this with ) Tj /F6 10 Tf (.index\(\) ) Tj /F1 10 Tf (function:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 573.6236 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 553.6236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (We can also insert items into a list in order with ) Tj /F6 10 Tf (.insert\(\)) Tj /F1 10 Tf (, for example:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 508.4236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 36 re B*
+Q
+q
+BT 1 0 0 1 0 14 Tm 12 TL /F3 10 Tf 0 0 0 rg (list_name) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (insert) Tj (\() Tj .4 .4 .4 rg (1) Tj 0 0 0 rg (,) Tj ( ) Tj .729412 .129412 .129412 rg ('Hello') Tj 0 0 0 rg (\)) Tj (  ) Tj /F4 10 Tf .25098 .501961 .501961 rg (#this will put the item 'Hello') Tj /F3 10 Tf 0 0 0 rg  T* /F4 10 Tf .25098 .501961 .501961 rg (# in index 1 and move the following items on +1 index.) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 488.4236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (We can order a list with function ) Tj /F6 10 Tf (.sort\(\)) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 407.2236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 72 re B*
+Q
+q
+BT 1 0 0 1 0 50 Tm 12 TL /F3 10 Tf 0 0 0 rg (animals) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj ([) Tj .729412 .129412 .129412 rg ("cat") Tj 0 0 0 rg (,) Tj ( ) Tj .729412 .129412 .129412 rg ("ant") Tj 0 0 0 rg (,) Tj ( ) Tj .729412 .129412 .129412 rg ("bat") Tj 0 0 0 rg (]) Tj  T* (animals) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (sort) Tj (\(\)) Tj  T*  T* /F5 10 Tf 0 .501961 0 rg (for) Tj /F3 10 Tf 0 0 0 rg ( ) Tj (animal) Tj ( ) Tj /F5 10 Tf .666667 .133333 1 rg (in) Tj /F3 10 Tf 0 0 0 rg ( ) Tj (animals) Tj (:) Tj  T* /F5 10 Tf 0 .501961 0 rg (print) Tj /F3 10 Tf 0 0 0 rg ( ) Tj (animal) Tj (    ) Tj /F4 10 Tf .25098 .501961 .501961 rg (#this will print 'ant','bat','cat'; in alphabetical order.) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 374.2236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (REMOVING ELEMENTS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 332.2236 cm
+q
+BT 1 0 0 1 0 26 Tm .601654 Tw 12 TL /F1 10 Tf 0 0 0 rg (You can use ) Tj /F6 10 Tf (.remove\(item\) ) Tj /F1 10 Tf (to remove an item from the list, ) Tj /F6 10 Tf (.pop\(index\) ) Tj /F1 10 Tf (to remove the item at index from) Tj T* 0 Tw .602339 Tw (the list and return this one to you, or ) Tj /F6 10 Tf (del\(list_name[index]\) ) Tj /F1 10 Tf (to remove that item like ) Tj /F6 10 Tf (.pop ) Tj /F1 10 Tf (without returning) Tj T* 0 Tw (it:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 263.0236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 60 re B*
+Q
+q
+BT 1 0 0 1 0 38 Tm 12 TL /F3 10 Tf 0 0 0 rg (n) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj ([) Tj .4 .4 .4 rg (1) Tj 0 0 0 rg (,) Tj ( ) Tj .4 .4 .4 rg (3) Tj 0 0 0 rg (,) Tj ( ) Tj .4 .4 .4 rg (5) Tj 0 0 0 rg (]) Tj  T* (n) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (pop) Tj (\() Tj .4 .4 .4 rg (1) Tj 0 0 0 rg (\)) Tj (                ) Tj /F4 10 Tf .25098 .501961 .501961 rg (# Returns and deletes 3 \(the item at index 1\)) Tj /F3 10 Tf 0 0 0 rg  T* (n) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (remove) Tj (\() Tj .4 .4 .4 rg (1) Tj 0 0 0 rg (\)) Tj (             ) Tj /F4 10 Tf .25098 .501961 .501961 rg (# Removes 1 from the list) Tj /F3 10 Tf 0 0 0 rg  T* /F5 10 Tf 0 .501961 0 rg (del) Tj /F3 10 Tf 0 0 0 rg (\() Tj (n) Tj ([) Tj .4 .4 .4 rg (1) Tj 0 0 0 rg (]\)) Tj (               ) Tj /F4 10 Tf .25098 .501961 .501961 rg (# Removes 1 and doesn't return anything) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+% 'R22': class PDFPageLabels 
+22 0 obj
+% Document Root
+<< /Nums [ 0
+ 23 0 R
+ 1
+ 24 0 R ] >>
+endobj
+% 'R23': class PDFPageLabel 
+23 0 obj
+% None
+<< /S /D
+ /St 1 >>
+endobj
+% 'R24': class PDFPageLabel 
+24 0 obj
+% None
+<< /S /D
+ /St 2 >>
+endobj
+xref
+0 25
+0000000000 65535 f
+0000000113 00000 n
+0000000269 00000 n
+0000000434 00000 n
+0000000609 00000 n
+0000000770 00000 n
+0000000947 00000 n
+0000001118 00000 n
+0000001297 00000 n
+0000001576 00000 n
+0000001856 00000 n
+0000002015 00000 n
+0000002297 00000 n
+0000002422 00000 n
+0000002594 00000 n
+0000002784 00000 n
+0000002970 00000 n
+0000003157 00000 n
+0000003356 00000 n
+0000003517 00000 n
+0000003632 00000 n
+0000010602 00000 n
+0000016024 00000 n
+0000016130 00000 n
+0000016207 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
+ [(\347G\300\177c\307T\257\322\367,/>\231\327w) (\347G\300\177c\307T\257\322\367,/>\231\327w)] 
+
+ /Info 11 0 R
+ /Root 10 0 R
+ /Size 25 >>
+startxref
+16254
+%%EOF

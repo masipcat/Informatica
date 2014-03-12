@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>match &mdash; Gestió documentació 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Gestió documentació 1.0 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Gestió documentació 1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for match</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">============</span>
+<span class="sd">match module</span>
+<span class="sd">============</span>
+
+<span class="sd">Use this module to compare if two images are similar.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c"># DEV: Jordi Masip</span>
+
+<span class="c">#import imgio, tranf, split, sys, os</span>
+<span class="c">#from utiles import *</span>
+<span class="c">#from img import *</span>
+
+<div class="viewcode-block" id="compare_image"><a class="viewcode-back" href="../match.html#match.compare_image">[docs]</a><span class="k">def</span> <span class="nf">compare_image</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">pttrn</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Return a floating value between 0-1. </span>
+
+<span class="sd">	:param img: main image</span>
+<span class="sd">	:type img: list</span>
+<span class="sd">	:param pttrn: pattern</span>
+<span class="sd">	:type img: list</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">total_pixels</span><span class="p">,</span> <span class="n">coincidence</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">img</span><span class="p">),</span> <span class="mi">0</span>
+	
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">img</span><span class="p">)):</span>
+		<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+			<span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">pttrn</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]:</span>
+				<span class="n">coincidence</span> <span class="o">+=</span> <span class="mi">1</span>
+	<span class="k">if</span> <span class="n">total_pixels</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="k">return</span> <span class="n">coincidence</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">total_pixels</span><span class="p">)</span>
+	<span class="k">return</span> <span class="mi">0</span>
+</div>
+<div class="viewcode-block" id="load_patterns"><a class="viewcode-back" href="../match.html#match.load_patterns">[docs]</a><span class="k">def</span> <span class="nf">load_patterns</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Return a list of tuples that first element of each tuple is the value that represents the pattern. The second element is a image matrix</span>
+
+<span class="sd">	:param prefix: filename prefix</span>
+<span class="sd">	:type prefix: str</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">debug</span><span class="p">(</span><span class="s">&quot;Recordar canviar a load_patterns() -&gt; range(10)&quot;</span><span class="p">)</span>
+	<span class="k">return</span> <span class="p">[(</span><span class="n">num</span><span class="p">,</span> <span class="n">imgio</span><span class="o">.</span><span class="n">read_bn</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;.jpeg&quot;</span><span class="p">))</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</div>
+<div class="viewcode-block" id="match"><a class="viewcode-back" href="../match.html#match.match">[docs]</a><span class="k">def</span> <span class="nf">match</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">patlst</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Return an integer between 0-9 that represents the number in the image. If no number in the image, return -1.</span>
+
+<span class="sd">	:param img: main image</span>
+<span class="sd">	:type img: list</span>
+<span class="sd">	:param patlst: list of patterns</span>
+<span class="sd">	:type img: list</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="c"># Mida de la imatge</span>
+	<span class="n">img_size</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">img</span><span class="p">))</span>
+
+	<span class="c"># ((int) valor de la imatge, (float) coincidence)</span>
+	<span class="n">best_match</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+	<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">patlst</span><span class="p">):</span>
+		<span class="n">pattern</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="n">pattern</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+		<span class="n">debug</span><span class="p">(</span><span class="s">&quot;img_size &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">img_size</span><span class="p">))</span>
+		<span class="n">pattern_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_w</span><span class="p">(</span><span class="n">pattern</span><span class="p">),</span> <span class="n">get_h</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span>
+		<span class="n">debug</span><span class="p">(</span><span class="s">&quot;pattern_size &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">pattern_size</span><span class="p">))</span>
+		
+		<span class="k">if</span> <span class="n">img_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">pattern_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+			<span class="n">img</span> <span class="o">=</span> <span class="n">tranf</span><span class="o">.</span><span class="n">scale</span><span class="p">((</span><span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="n">img</span><span class="p">),</span> <span class="n">pattern_size</span><span class="p">[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">1</span><span class="p">]</span>
+			<span class="n">img_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_w</span><span class="p">((</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">img</span><span class="p">)),</span> <span class="n">get_h</span><span class="p">((</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">img</span><span class="p">)))</span>
+			
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">pattern</span> <span class="o">=</span> <span class="n">tranf</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">img_size</span><span class="p">[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">1</span><span class="p">]</span>
+			<span class="n">pattern_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_w</span><span class="p">((</span><span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)),</span> <span class="n">get_h</span><span class="p">((</span><span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)))</span>
+
+		<span class="k">if</span> <span class="n">img_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">pattern_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+			<span class="n">scroll</span> <span class="o">=</span> <span class="n">img_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">pattern_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+			
+			<span class="n">big_size</span> <span class="o">=</span> <span class="n">img_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+			<span class="n">small_size</span> <span class="o">=</span> <span class="n">pattern_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+			
+			<span class="n">big_image</span> <span class="o">=</span> <span class="n">img</span>
+			<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+				<span class="n">small_image</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+			<span class="k">else</span><span class="p">:</span>
+				<span class="n">small_image</span> <span class="o">=</span> <span class="n">pattern</span>	
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">scroll</span> <span class="o">=</span> <span class="n">pattern_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">img_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+			<span class="n">big_size</span> <span class="o">=</span> <span class="n">pattern_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+			<span class="n">small_size</span> <span class="o">=</span> <span class="n">img_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+			<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+				<span class="n">big_image</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+			<span class="k">else</span><span class="p">:</span>
+				<span class="n">big_image</span> <span class="o">=</span> <span class="n">pattern</span>
+			<span class="n">small_image</span> <span class="o">=</span> <span class="n">img</span>
+
+		<span class="n">debug</span><span class="p">(</span><span class="s">&quot;Scroll: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">scroll</span><span class="p">))</span>
+		
+		<span class="c"># Es desa la nova mida</span>
+		<span class="n">debug</span><span class="p">(</span><span class="s">&quot;pattern_size_scalated &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">pattern_size</span><span class="p">))</span>
+		<span class="n">last_coincidence</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+		
+		<span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">scroll</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+			<span class="n">croped_img</span> <span class="o">=</span> <span class="n">split</span><span class="o">.</span><span class="n">image_slice_vertical</span><span class="p">(</span><span class="n">big_image</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">small_size</span> <span class="o">+</span> <span class="n">position</span><span class="p">)</span>
+			<span class="n">coincidence</span> <span class="o">=</span> <span class="n">compare_image</span><span class="p">(</span><span class="n">croped_img</span><span class="p">,</span> <span class="n">small_image</span><span class="p">)</span>
+			<span class="k">if</span> <span class="n">coincidence</span> <span class="o">&gt;</span> <span class="n">last_coincidence</span><span class="p">:</span>
+				<span class="n">last_coincidence</span> <span class="o">=</span> <span class="n">coincidence</span>
+		
+		<span class="k">if</span> <span class="n">best_match</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">last_coincidence</span><span class="p">:</span>
+			<span class="n">best_match</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">last_coincidence</span><span class="p">)</span>
+
+	<span class="n">debug</span><span class="p">(</span><span class="s">&quot;El best_match es &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">best_match</span><span class="p">))</span>
+	<span class="k">return</span> <span class="n">best_match</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">best_match</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">0.6</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Gestió documentació 1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Oriol Lanuza, Jordi Masip.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

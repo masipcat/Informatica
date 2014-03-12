@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>garage &mdash; Garage class 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Garage class 1.0 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Garage class 1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for garage</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">=============</span>
+<span class="sd">Garage module</span>
+<span class="sd">=============</span>
+
+<span class="sd">This module contains Garage Class</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">car</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<div class="viewcode-block" id="Garage"><a class="viewcode-back" href="../garage.html#garage.Garage">[docs]</a><span class="k">class</span> <span class="nc">Garage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+	<span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Garage constructor</span>
+
+<span class="sd">		:param name: Garage name</span>
+<span class="sd">		:type name: str</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_cars</span> <span class="o">=</span> <span class="p">{}</span>
+
+<div class="viewcode-block" id="Garage.addCar"><a class="viewcode-back" href="../garage.html#garage.Garage.addCar">[docs]</a>	<span class="k">def</span> <span class="nf">addCar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Add a car to this garage. Car must have a valid license</span>
+
+<span class="sd">		:param car: Car object</span>
+<span class="sd">		:type car: Car</span>
+
+<span class="sd">		&gt;&gt;&gt; car = Car(CarLicense(&quot;7777 JMR&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; car_2 = Car(CarLicense(&quot;matricula-invalida&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; g = Garage(&quot;Cal Masip&quot;)</span>
+<span class="sd">		&gt;&gt;&gt; g.addCar(car)</span>
+<span class="sd">		&gt;&gt;&gt; g.addCar(car_2)</span>
+<span class="sd">		&gt;&gt;&gt; g.countCars()</span>
+<span class="sd">		1</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="k">if</span> <span class="n">car</span><span class="o">.</span><span class="n">getLicense</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cars</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">and</span> <span class="n">car</span><span class="o">.</span><span class="n">getLicense</span><span class="p">()</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">_cars</span><span class="p">[</span><span class="n">car</span><span class="o">.</span><span class="n">getLicense</span><span class="p">()</span><span class="o">.</span><span class="n">getValue</span><span class="p">()]</span> <span class="o">=</span> <span class="n">car</span>
+</div>
+<div class="viewcode-block" id="Garage.removeCarByLicense"><a class="viewcode-back" href="../garage.html#garage.Garage.removeCarByLicense">[docs]</a>	<span class="k">def</span> <span class="nf">removeCarByLicense</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Remove the car with license `license`, if exist. Return `True` if car is removed and `False` if isn&#39;t removed</span>
+
+<span class="sd">		:param license: Car license</span>
+<span class="sd">		:type license: CarLicense</span>
+
+<span class="sd">		&gt;&gt;&gt; car = Car(CarLicense(&quot;7777 JMR&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; car.setColor(Color(0, 255, 50))</span>
+<span class="sd">		&gt;&gt;&gt; g = Garage(&quot;Cal Masip&quot;)</span>
+<span class="sd">		&gt;&gt;&gt; g.addCar(car)</span>
+<span class="sd">		&gt;&gt;&gt; g.removeCarByLicense(CarLicense(&quot;4444 RMJ&quot;))</span>
+<span class="sd">		False</span>
+<span class="sd">		&gt;&gt;&gt; g.removeCarByLicense(CarLicense(&quot;7777 JMR&quot;))</span>
+<span class="sd">		True</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="k">if</span> <span class="n">license</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cars</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+			<span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cars</span><span class="p">[</span><span class="n">license</span><span class="o">.</span><span class="n">getValue</span><span class="p">()]</span>
+			<span class="k">return</span> <span class="bp">True</span>
+		<span class="k">return</span> <span class="bp">False</span>
+</div>
+<div class="viewcode-block" id="Garage.countCars"><a class="viewcode-back" href="../garage.html#garage.Garage.countCars">[docs]</a>	<span class="k">def</span> <span class="nf">countCars</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Count the number of cars in the garage. Returns an `int`.</span>
+
+<span class="sd">		&gt;&gt;&gt; car = Car(CarLicense(&quot;7777 JMR&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; car_2 = Car(CarLicense(&quot;6688 JMR&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; g = Garage(&quot;Cal Masip&quot;)</span>
+<span class="sd">		&gt;&gt;&gt; g.addCar(car)</span>
+<span class="sd">		&gt;&gt;&gt; g.addCar(car_2)</span>
+<span class="sd">		&gt;&gt;&gt; g.countCars()</span>
+<span class="sd">		2</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cars</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Garage.getRandomCar"><a class="viewcode-back" href="../garage.html#garage.Garage.getRandomCar">[docs]</a>	<span class="k">def</span> <span class="nf">getRandomCar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Returns a random car object from garage</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="n">n_cars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">countCars</span><span class="p">()</span>
+		<span class="k">if</span> <span class="n">n_cars</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+			<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cars</span><span class="o">.</span><span class="n">values</span><span class="p">()[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_cars</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="k">return</span> <span class="bp">False</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Garage class 1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Jordi Masip.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>

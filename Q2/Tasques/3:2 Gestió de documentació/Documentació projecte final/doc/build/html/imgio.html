@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>imgio module &mdash; Gestió documentació 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Gestió documentació 1.0 documentation" href="index.html" />
+    <link rel="next" title="match module" href="match.html" />
+    <link rel="prev" title="Welcome to Gestió documentació’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="match.html" title="match module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Gestió documentació’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Gestió documentació 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <span class="target" id="module-imgio"></span><div class="section" id="imgio-module">
+<h1>imgio module<a class="headerlink" href="#imgio-module" title="Permalink to this headline">¶</a></h1>
+<p>Use this module to work with image files. You can <strong>read</strong>, <strong>write</strong> and <strong>show</strong> image files easly.</p>
+<dl class="function">
+<dt id="imgio.read_bn">
+<tt class="descclassname">imgio.</tt><tt class="descname">read_bn</tt><big>(</big><em>nomf</em><big>)</big><a class="reference internal" href="_modules/imgio.html#read_bn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imgio.read_bn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read image as bw matrix from file. Returns a image_matrix</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>nomf</strong> (<em>str</em>) &#8211; filename</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="imgio.read_rgb">
+<tt class="descclassname">imgio.</tt><tt class="descname">read_rgb</tt><big>(</big><em>nomf</em><big>)</big><a class="reference internal" href="_modules/imgio.html#read_rgb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imgio.read_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read image as rgb matrix from file. Returns a tuple like (image_matrix, &#8220;RGB&#8221;)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>nomf</strong> (<em>str</em>) &#8211; filename</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="imgio.save">
+<tt class="descclassname">imgio.</tt><tt class="descname">save</tt><big>(</big><em>img</em>, <em>nomf</em><big>)</big><a class="reference internal" href="_modules/imgio.html#save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imgio.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save an image from image matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>img</strong> (<em>list</em>) &#8211; image matrix</li>
+<li><strong>nomf</strong> (<em>str</em>) &#8211; filename</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="imgio.show">
+<tt class="descclassname">imgio.</tt><tt class="descname">show</tt><big>(</big><em>i</em><big>)</big><a class="reference internal" href="_modules/imgio.html#show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imgio.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show an image from image matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>i</strong> (<em>list</em>) &#8211; image matrix</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Gestió documentació&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="match.html"
+                        title="next chapter">match module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/imgio.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="match.html" title="match module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Gestió documentació’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">Gestió documentació 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Oriol Lanuza, Jordi Masip.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

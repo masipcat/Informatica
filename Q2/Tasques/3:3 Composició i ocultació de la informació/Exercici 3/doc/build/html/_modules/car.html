@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>car &mdash; Garage class 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Garage class 1.0 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Garage class 1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for car</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">==========</span>
+<span class="sd">Car module</span>
+<span class="sd">==========</span>
+
+<span class="sd">This module contains Car Class</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">utiles</span> <span class="kn">import</span> <span class="n">Color</span><span class="p">,</span> <span class="n">CarLicense</span>
+
+<div class="viewcode-block" id="Car"><a class="viewcode-back" href="../car.html#car.Car">[docs]</a><span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+	<span class="c"># Constants que representent el tipus de motor</span>
+	<span class="n">ENGINE_DIESEL</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="n">ENGINE_GASOLINE</span> <span class="o">=</span> <span class="mi">1</span>
+
+	<span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_license</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Car constructor</span>
+
+<span class="sd">		:param car_license: Car license</span>
+<span class="sd">		:type car_license: CarLicense</span>
+
+<span class="sd">		&gt;&gt;&gt; renault = Car(CarLicense(&quot;1234 WWW&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.getLicense().getValue()</span>
+<span class="sd">		&#39;1234 WWW&#39;</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		
+		<span class="bp">self</span><span class="o">.</span><span class="n">_license</span> <span class="o">=</span> <span class="n">car_license</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="s">&quot;unknown model&quot;</span>
+
+<div class="viewcode-block" id="Car.getLicense"><a class="viewcode-back" href="../car.html#car.Car.getLicense">[docs]</a>	<span class="k">def</span> <span class="nf">getLicense</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Return an string from CarLicense object</span>
+
+<span class="sd">		&gt;&gt;&gt; renault = Car(CarLicense(&quot;1234 WWW&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.getLicense().getValue()</span>
+<span class="sd">		&#39;1234 WWW&#39;</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_license</span>
+</div>
+<div class="viewcode-block" id="Car.setLicense"><a class="viewcode-back" href="../car.html#car.Car.setLicense">[docs]</a>	<span class="k">def</span> <span class="nf">setLicense</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Set license using CarLicense class</span>
+
+<span class="sd">		:param license: Set license</span>
+<span class="sd">		:type license: CarLicense</span>
+
+<span class="sd">		&gt;&gt;&gt; renault = Car(CarLicense(&quot;1234 WWW&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.setLicense(CarLicense(&quot;2222 BCD&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.getLicense().getValue()</span>
+<span class="sd">		&#39;2222 BCD&#39;</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_license</span> <span class="o">=</span> <span class="n">license</span>
+</div>
+<div class="viewcode-block" id="Car.getModel"><a class="viewcode-back" href="../car.html#car.Car.getModel">[docs]</a>	<span class="k">def</span> <span class="nf">getModel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Get the model of this car</span>
+
+<span class="sd">		&gt;&gt;&gt; renault = Car(CarLicense(&quot;1234 WWW&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.setModel(&quot;Renault Grand Modus&quot;)</span>
+<span class="sd">		&gt;&gt;&gt; renault.getModel()</span>
+<span class="sd">		&#39;Renault Grand Modus&#39;</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span>
+</div>
+<div class="viewcode-block" id="Car.setModel"><a class="viewcode-back" href="../car.html#car.Car.setModel">[docs]</a>	<span class="k">def</span> <span class="nf">setModel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Set the model of this car</span>
+
+<span class="sd">		:param model: Car model</span>
+<span class="sd">		:type model: str</span>
+
+<span class="sd">		&gt;&gt;&gt; renault = Car(CarLicense(&quot;1234 WWW&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.setModel(&quot;Renault Grand Modus&quot;)</span>
+<span class="sd">		&gt;&gt;&gt; renault.getModel()</span>
+<span class="sd">		&#39;Renault Grand Modus&#39;</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+</div>
+<div class="viewcode-block" id="Car.getColor"><a class="viewcode-back" href="../car.html#car.Car.getColor">[docs]</a>	<span class="k">def</span> <span class="nf">getColor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Return an RGB Color</span>
+
+<span class="sd">		&gt;&gt;&gt; renault = Car(CarLicense(&quot;1234 WWW&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.setColor(Color(24,24,0))</span>
+<span class="sd">		&gt;&gt;&gt; renault.getColor()</span>
+<span class="sd">		(24, 24, 0)</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_color</span>
+</div>
+<div class="viewcode-block" id="Car.setColor"><a class="viewcode-back" href="../car.html#car.Car.setColor">[docs]</a>	<span class="k">def</span> <span class="nf">setColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Change car color</span>
+
+<span class="sd">		:param color: RGB Color</span>
+<span class="sd">		:type color: Color</span>
+
+<span class="sd">		&gt;&gt;&gt; renault = Car(CarLicense(&quot;1234 WWW&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.setColor(Color(24,24,0))</span>
+<span class="sd">		&gt;&gt;&gt; renault.getColor()</span>
+<span class="sd">		(24, 24, 0)</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Car.getEngine"><a class="viewcode-back" href="../car.html#car.Car.getEngine">[docs]</a>	<span class="k">def</span> <span class="nf">getEngine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Return 0 for `ENGINE_DIESEL` and 1 for `ENGINE_GASOLINE`</span>
+
+<span class="sd">		&gt;&gt;&gt; renault = Car(CarLicense(&quot;1234 WWW&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.setEngine(Car.ENGINE_GASOLINE)</span>
+<span class="sd">		&gt;&gt;&gt; renault.getEngine()</span>
+<span class="sd">		1</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span>
+</div>
+<div class="viewcode-block" id="Car.setEngine"><a class="viewcode-back" href="../car.html#car.Car.setEngine">[docs]</a>	<span class="k">def</span> <span class="nf">setEngine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">engine</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Set engine type. Use `ENGINE_DIESEL` and `ENGINE_GASOLINE` constants.</span>
+
+<span class="sd">		:param engine: Car.ENGINE_DIESEL or Car.ENGINE_GASOLINE</span>
+<span class="sd">		:type engine: int</span>
+
+<span class="sd">		&gt;&gt;&gt; renault = Car(CarLicense(&quot;1234 WWW&quot;))</span>
+<span class="sd">		&gt;&gt;&gt; renault.setEngine(Car.ENGINE_DIESEL)</span>
+<span class="sd">		&gt;&gt;&gt; renault.getEngine()</span>
+<span class="sd">		0</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="k">if</span> <span class="n">engine</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="n">engine</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Garage class 1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Jordi Masip.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>
